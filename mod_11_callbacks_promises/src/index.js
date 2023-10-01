@@ -5,8 +5,8 @@
 //import { promesaLenta, promesaMedia, promesaRapida } from './js/129_promise_race.js';
 //import { buscarHeroe, buscarHeroeAsync } from './js/130_async.js';
 //import { obtenerHeroesArr  } from "./js/131_await";
-//import { obtenerHeroeAwait  } from "./js/133_await_err";
-import { heroesCiclo, heroeIfAwait } from "./js/134_await_for_if";
+import { obtenerHeroeAwait  } from "./js/133_await_err";
+//import { heroesCiclo, heroeIfAwait } from "./js/134_await_for_if";
 
 const heroeId1 = 'capi';
 const heroeId2 = 'spider';
@@ -114,18 +114,18 @@ const heroeId2 = 'spider';
 
 
 //? 133 await-error
-// console.time('await');
-//     obtenerHeroeAwait()
-//         .then( heroes => {
-//             console.table(heroes);
-//             console.timeEnd('await');
-//         });
+console.time('await');
+    obtenerHeroeAwait()
+        .then( heroes => {
+            console.table(heroes);
+            console.timeEnd('await');
+        });
 //? 133 await-error
 
 
 //? 134 for-if await
-heroesCiclo();
-heroeIfAwait('capi');
+// heroesCiclo();
+// heroeIfAwait('capi');
 //? 134 for-if await
 
 console.log('Fin de programaaa');
